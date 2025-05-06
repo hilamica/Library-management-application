@@ -1,0 +1,32 @@
+<mat-list *ngIf="booksList$ | async as bookList" class="list">
+  <mat-list-item
+    *ngFor="let book of bookList"
+    (click)="getDetails(book)"
+    #books
+    class="list-item"
+  >
+    <div class="content-wrapper">
+      <div class="left-part">
+        <mat-checkbox
+          (click)="$event.stopPropagation()"
+          (change)="checkBook(book, $event.checked)"
+        ></mat-checkbox>
+        <div class="title" title="{{ book.title }}">
+          {{ book.title }}
+        </div>
+      </div>
+      <div style="display: flex; align-items: center">
+        <button mat-mini-fab class="edit-button" (click)="editBook(book)">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </div>
+    </div>
+  </mat-list-item>
+</mat-list>
+<mat-paginator
+  #paginator
+  [length]="(bookService.totalResults$ | async) || 0"
+  [pageSize]="pageSize"
+  [pageSizeOptions]="[5, 10, 20]"
+>
+</mat-paginator>

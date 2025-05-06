@@ -1,0 +1,40 @@
+<form [formGroup]="saveBookForm">
+  <h2 mat-dialog-title>{{ bookToEdit ? "Edit Book" : "Add New Book" }}</h2>
+  <mat-dialog-content class="mat-typography">
+    <div class="field">
+      <div class="field-name">Title:</div>
+      <input formControlName="title" class="field-input" />
+    </div>
+    <div class="field">
+      <div class="field-name">Authors:</div>
+      <input formControlName="authors" class="field-input" />
+    </div>
+    <div class="field">
+      <div class="field-name">Published Date:</div>
+      <input formControlName="publishedDate" type="date" class="field-input" />
+    </div>
+    <div class="field">
+      <div class="field-name">Description:</div>
+      <textarea formControlName="description" class="field-input-desc">
+      </textarea>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions
+    [align]="'end'"
+    class="dialog-buttons-area"
+    style="padding: 0 24px"
+  >
+    <button mat-button mat-dialog-close style="margin-right: 10px">
+      Cancel
+    </button>
+
+    <button
+      mat-button
+      cdkFocusInitial
+      [disabled]="!saveBookForm.valid"
+      [mat-dialog-close]="saveBookForm"
+    >
+      {{ bookToEdit ? "Update" : "Add" }}
+    </button>
+  </mat-dialog-actions>
+</form>

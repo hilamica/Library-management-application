@@ -1,0 +1,19 @@
+.field {
+  display: flex;
+  .field-name {
+    width: 170px;
+  }
+  .field-input {
+    width: 100%;
+  }
+
+  textarea {
+    resize: none;
+    height: 72px;
+    width: 100%;
+  }
+}
+
+.dialog-buttons-area {
+  padding: 0 24px;
+}

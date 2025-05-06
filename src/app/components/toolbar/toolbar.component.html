@@ -1,0 +1,18 @@
+<mat-toolbar>
+  <div class="search">
+    <div class="input-container">
+      <input [formControl]="searchControl" class="input-search" />
+      <button mat-mini-fab class="clear-button" (click)="clearText()">
+        <mat-icon>clear</mat-icon>
+      </button>
+    </div>
+
+    <button mat-icon-button>
+      <mat-icon>search</mat-icon>
+    </button>
+  </div>
+  <button mat-button (click)="addNewBook()">Add</button>
+  <button [disabled]="isDeleteButtonDisable" (click)="deleteBooks()" mat-button>
+    Delete
+  </button>
+</mat-toolbar>

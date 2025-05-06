@@ -1,0 +1,42 @@
+.list {
+  padding: 0 10px;
+
+  .list-item {
+    background-color: #8b008b;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    cursor: pointer;
+
+    .edit-button {
+      background: transparent;
+      border: none;
+      margin-left: auto; 
+      flex-shrink: 0;
+    }
+
+    .content-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      .left-part {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        min-width: 0;
+        .title {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          flex: 1;
+          min-width: 0;
+        }
+      }
+    }
+  }
+
+  .list-item :hover {
+    color: #000080;
+  }
+}

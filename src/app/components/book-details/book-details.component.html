@@ -1,0 +1,14 @@
+<div *ngIf="selectedBook$ | async as selectedBook">
+  <div class="field">
+    <div class="title">Title:</div>
+    <div>{{ selectedBook.title }}</div>
+  </div>
+  <div class="field">
+    <div class="title">Authors:</div>
+    <div>{{ selectedBook.authors }}</div>
+  </div>
+  <div class="field">
+    <div class="title">Description:</div>
+    <div>{{ selectedBook.description }}</div>
+  </div>
+</div>
