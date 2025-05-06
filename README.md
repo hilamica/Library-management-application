@@ -1,4 +1,4 @@
-# 📚 Book Management App
+# 📚 Library Management App
 
 This is an Angular standalone application for managing a book list, integrated with the Google Books API.
 
@@ -31,7 +31,7 @@ This is an Angular standalone application for managing a book list, integrated w
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/book-management-app.git
+git clone https://github.com/hilamica/Library-management-application.git
 cd book-management-app
 ```
 
